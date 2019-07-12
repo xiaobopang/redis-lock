@@ -50,12 +50,11 @@ DEL key [KEY …]
 ```
 SETNX 可以直接加锁操作，比如说对某个关键词redislock加锁，客户端可以尝试
 
-command : SETNX key seconds value
-
-SETNX redislock 20 redislock
+SETNX redislock redislock
 
 如果返回1，表示客户端已经获取锁，可以往下操作，操作完成后，通过 DEL foo.lock命令来释放锁。
 
 如果返回0，说明 redislock 已经被其他客户端上锁，如果锁是非堵塞的，可以选择返回调用。如果是堵塞调用调用，就需要进入以下个重试循环，直至成功获得锁或者重试超时。理想是美好的，现实是残酷的。仅仅使用SETNX加锁带有竞争条件的，在某些特定的情况会造成死锁错误。
 
 ```
+![结果如图](./1.png)
