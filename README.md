@@ -1,4 +1,10 @@
-# php_redis_distributed_lock
+# redis_lock
+
+## Example
+### 1、通过composer包安装【推荐】
+```
+   composer require xiaobopang/redis_lock
+```
 PHP Redis分布式锁机制的简单实现
 
 

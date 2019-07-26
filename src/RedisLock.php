@@ -1,4 +1,7 @@
 <?php
+
+namespace Xiaobopang;
+
 class RedisLock
 {
     private $redis;
@@ -18,7 +21,7 @@ class RedisLock
             $this->redis->auth($password);
             $this->redis->select($index);
         } catch (Exception $e) {
-            throw new Exception(400, 'Redis connection failed');
+            throw new Exception('Redis connection failed', 400);
         }
     }
     /**
