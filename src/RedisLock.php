@@ -15,7 +15,7 @@ class RedisLock
      */
     public function __construct($host = '127.0.0.1', $port = '6379', $password = '', $index = 0)
     {
-        $this->redis = new Redis();
+        $this->redis = new \Redis();
         try {
             $this->redis->pconnect($host, $port);
             $this->redis->auth($password);
