@@ -18,7 +18,7 @@
     "autoload": {
         "psr-4": {
             "Xiaobopang\\": "src/",
-            "Xiaobopang\\Xiaobopang": "src/RedisLock"
+            "Xiaobopang\\Xiaobopang\\": "src/RedisLock"
         }
     },
     "autoload-dev": {
