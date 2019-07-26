@@ -5,16 +5,23 @@ namespace Xiaobopang\Test;
 use PHPUnit\Framework\TestCase;
 use Xiaobopang\RedisLock;
 
-class PinyinTest extends TestCase
+class RedisLockTest extends TestCase
 {
-    public function testPinyinCase()
+    public function testRedisLockCase()
     {
         /**
          * 初始化redis连接
          */
         $redis = new RedisLock("172.17.0.1", 16379, 'pang123', 3);
 
-        //模拟锁
-        $this->assertNull(tryLock("test_lock", $redis->getMilliSecond()));
+        //加锁
+        $this->assertTrue($redis->tryLock("test_lock", $redis->getMilliSecond()));
+
+        //释放锁
+        $this->assertTrue($redis->releaseLock("test_lock", $redis->getMilliSecond()));
+
+        //阻塞锁
+        $this->assertTrue($redis->block("test_lock", $redis->getMilliSecond()));
+
     }
 }

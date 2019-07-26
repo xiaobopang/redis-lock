@@ -59,7 +59,7 @@ class RedisLock
         }
         $now = $this->getMilliSecond();
         $lock = $this->redis->setnx($lock_key, $lock_timeout);
-        if ($lock || (($now > (float) $this->redis->get($lock_key)) && $now > (float) $this->redis->get_set($lock_key, $lock_timeout))) {
+        if ($lock || (($now > (float) $this->redis->get($lock_key)) && $now > (float) $this->redis->getset($lock_key, $lock_timeout))) {
             return true;
         } else {
             return false;

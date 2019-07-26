@@ -5,6 +5,25 @@
 ```
    composer require xiaobopang/redis-lock
 ```
+
+### 2、使用
+
+```
+       use Xiaobopang\RedisLock;
+
+        $redis = new RedisLock("127.0.0.1", 16379, 'test123', 3);
+
+        //加锁
+        $redis->tryLock("test_lock", $redis->getMilliSecond());
+
+        //释放锁
+        $redis->releaseLock("test_lock", $redis->getMilliSecond());
+
+        //阻塞锁
+        $redis->block("test_lock", $redis->getMilliSecond());
+```
+
+
 PHP Redis分布式锁机制的简单实现
 
 
