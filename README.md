@@ -3,7 +3,7 @@
 ## Example
 ### 1、通过composer包安装【推荐】
 ```
-   composer require xiaobopang/redis_lock
+   composer require xiaobopang/redis-lock
 ```
 PHP Redis分布式锁机制的简单实现
 

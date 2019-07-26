@@ -1,5 +1,5 @@
 {
-    "name": "root/redis_lock",
+    "name": "xiaobopang/redis-lock",
     "description": "php redis分布式锁",
     "type": "library",
     "license": "Apache-2.0",
@@ -17,12 +17,12 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Xiaobopang\\redis_lock\\": "src/"
+            "Xiaobopang\\redis-lock\\": "src/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Xiaobopang\\redis_lock\\Test\\": "tests/"
+            "Xiaobopang\\redis-lock\\Test\\": "tests/"
         }
     },
     "require-dev": {
