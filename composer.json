@@ -14,7 +14,7 @@
         "php": ">=5.6",
         "phpunit/phpunit": "^7.5"
     },
-    "minimum-stability": "dev-master",
+    "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
             "Xiaobopang\\": "src/",
