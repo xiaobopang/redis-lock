@@ -17,12 +17,13 @@
     "minimum-stability": "dev",
     "autoload": {
         "psr-4": {
-            "Xiaobopang": "src/"
+            "Xiaobopang\\": "src/",
+            "Xiaobopang\\Xiaobopang": "src/RedisLock"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "Xiaobopang": "tests/"
+            "Xiaobopang\\Test\\": "tests/"
         }
     },
     "require-dev": {
