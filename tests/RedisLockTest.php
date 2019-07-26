@@ -12,7 +12,7 @@ class RedisLockTest extends TestCase
         /**
          * 初始化redis连接
          */
-        $redis = new RedisLock("127.0.0.1", 16379, 'test123', 3);
+        $redis = new RedisLock("192.168.1.1", 16379, 'test123', 3);
 
         //加锁
         $this->assertTrue($redis->tryLock("test_lock", $redis->getMilliSecond()));
