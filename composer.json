@@ -23,7 +23,7 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "Xiaobopang\\Test\\": "tests/"
+            "Xiaobopang\\Test\\": "tests/RedisLockTest"
         }
     },
     "require-dev": {
